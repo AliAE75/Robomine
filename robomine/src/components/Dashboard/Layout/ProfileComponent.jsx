@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { BsChevronDown } from 'react-icons/bs'
 import { styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -6,23 +6,22 @@ import Switch from '@mui/material/Switch';
 
 export default function ProfileComponent() {
 
+  const optionOut = useRef();
   const openOptions = (event) => {
 
-    const optionsOut = document.querySelector('.options-out');
+      if (event.currentTarget.classList.contains('options-in')) {
 
-    if (event.target.classList.contains('options-in') || event.target.parentElement.classList.contains('options-in')) {
-      if (optionsOut.classList.contains("open")) {
-        optionsOut.classList.remove("open");
+          if (optionOut.current.classList.contains('open')) {
+              optionOut.current.classList.remove('open')
+          }
+          else {
+              optionOut.current.classList.add('open')
+          }
       }
-      else {
-        optionsOut.classList.add("open");
+
+      else if (!event.currentTarget.classList.contains('options-in')) {
+              optionOut.current.classList.remove('open')
       }
-    }
-    else {
-      if (!event.target.classList.contains('options-in')) {
-        optionsOut.classList.remove("open");
-      }
-    }
   }
 
 
@@ -88,7 +87,7 @@ export default function ProfileComponent() {
           <div className="right_div">
             <div class="cash_options">
               <span class="options-in" onClick={openOptions}><i>US</i><p>&nbsp;&nbsp;USA&nbsp;&nbsp;</p><i><BsChevronDown className='bs-chevron-down' /></i></span>
-              <ul class="options-out">
+              <ul class="options-out" ref={optionOut}>
                 <li><i>US</i>&nbsp;&nbsp;USA</li>
                 <li><i>US</i>&nbsp;&nbsp;USA</li>
                 <li><i>US</i>&nbsp;&nbsp;USA</li>

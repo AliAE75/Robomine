@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { BsChevronDown } from 'react-icons/bs'
 import { IoFlashOutline } from 'react-icons/io5'
 import { FiBell } from 'react-icons/fi'
@@ -8,16 +8,30 @@ import '../../../js/dashboardHeader'
 
 export default function DashboardHeaderComponent() {
 
-    const BoxOut = document.querySelector('.box-out');
+    const BoxOut = useRef();
+
+    // useEffect(() => {
+    //     console.log('className' , BoxOut.current.className);
+    // })
 
     const openBoxOut = (event) => {
-        if (event.target.classList.contains('box-in') || event.target.parentElement.classList.contains('box-in')) {
-            if (BoxOut.classList.contains("open")) {
-                BoxOut.classList.remove("open");
+        // console.log('className', event.currentTarget.className);
+
+        if (event.currentTarget.classList.contains('box-in')) {
+
+            if (BoxOut.current.classList.contains('open')) {
+                // console.log('it have it')
+                BoxOut.current.classList.remove('open')
             }
             else {
-                BoxOut.classList.add("open");
+                BoxOut.current.classList.add('open')
+                // console.log('it have\'nt it')
             }
+        }
+
+        else if (!event.currentTarget.classList.contains('box-in')) {
+                BoxOut.current.classList.remove('open')
+                // console.log('it have\'nt it yet')
         }
     }
 
@@ -25,7 +39,7 @@ export default function DashboardHeaderComponent() {
         <div className='dashboard-header'>
             <div class="header-language-and-currency">
                 <span class="box-in" onClick={openBoxOut}><span>EN</span>/<span>USD</span><i><BsChevronDown className='bs-chevron-down' /></i></span>
-                <div className="box-out">
+                <div className="box-out" ref={BoxOut}>
                     <ul class="language-out">
                         <li>Language</li>
                         <li className='selected'><i>US</i>English</li>
