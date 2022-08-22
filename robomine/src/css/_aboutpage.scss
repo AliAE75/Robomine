@@ -1,0 +1,22 @@
+#About {
+    display: block;
+
+    .About__container {
+        width: 100%;
+        margin: 10rem 6rem 0;
+        overflow: hidden;
+
+        .row {
+            display: flex;
+
+            .About__content {
+                width: 40%;
+            }
+
+            .About__image {
+                width: 57%;
+                margin-left: 3%;
+            }
+        }
+    }
+}

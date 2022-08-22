@@ -1,0 +1,111 @@
+.currency__container {
+    margin: 6rem 6rem 0;
+    display: flex;
+    flex-direction: column;
+
+    .currency__title {
+        display: block;
+        width: 40%;
+    }
+
+    .currency__row {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 3rem auto 0;
+        box-shadow: 0px 0px 10px #FFFFFF42;
+        border: 1px solid #23262F;
+        border-radius: 30px;
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #23262F;
+            padding: 1rem 1rem 1.5rem;
+
+            .currencies {
+                display: flex;
+
+                .token-image {
+                    width: 40px;
+                    margin-right: 1rem;
+                }
+
+                .info {
+                    display: flex;
+                    flex-direction: column;
+
+                    .token-title {
+                        color: $gray;
+
+                        span {
+                            background-color: $green;
+                            margin: 0 .5rem;
+                            padding: 5px 10px;
+                            border-radius: 30px;
+                            border: none;
+                        }
+
+                        .currency-token-3 {
+                            background-color: $orange;
+                        }
+                    }
+
+                    .token-price {
+                        font-size: 18px;
+                    }
+
+                    .token-value {
+                        color: #FCFCFD;
+                        font-size: 10px;
+                    }
+                }
+
+                .chart-image {
+                    width: 90px;
+                }
+            }
+
+            .currency-2 {
+                margin: 0 1rem;
+            }
+        }
+
+        .buttons {
+            padding: 1rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #E6E8EC;
+
+            & a {
+                text-transform: capitalize !important;
+            }
+
+            .wallet {
+                padding: 6px 1rem;
+                background-color: transparent;
+                border: 2px solid #353945;
+                border-radius: 30px;
+            }
+
+            .buttons-group {
+                display: flex;
+                gap: 1rem;
+
+
+                a {
+                    padding: 6px 1rem;
+                    background-color: transparent;
+                    border: none;
+                    border-radius: 30px;
+
+                    &.active {
+                        background-color: #E6E8EC;
+                        color: #23262F;
+                    }
+                }
+            }
+        }
+    }
+}

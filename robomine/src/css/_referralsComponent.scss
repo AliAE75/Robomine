@@ -1,0 +1,101 @@
+.referrals_layout {
+    display: inline-flex;
+    width: 66.6666%;
+
+    .referrals_section {
+        background-color: rgb(24, 25, 29);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        border-radius: 20px;
+        padding: 3rem 2rem 2rem;
+        margin: 3rem 6rem 3rem 0;
+
+        h5 {
+            font-size: 10px;
+            text-transform: none;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .box-1 {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+
+            .up {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.5rem;
+
+                span {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 24px;
+                    color: $green;
+                }
+            }
+
+            .bottom {
+
+                p {
+                    color: $gray;
+                    font-size: 10px;
+                    text-transform: none;
+                    line-height: 1;
+                }
+            }
+        }
+
+        .box-2 {
+            display: flex;
+            flex-direction: column;
+            background-color: $box-color-1;
+            border-radius: 20px;
+            border: none;
+            padding: 1.5rem;
+            margin: 3rem 0;
+
+            h3 {
+                text-transform: none;
+                margin-bottom: 1rem;
+            }
+
+            .descripton-referral {
+                display: flex;
+
+                .referral-code-box,
+                .referral-link-box {
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+
+                    .title-referral-link {
+                        text-transform: uppercase;
+                        font-size: 8px;
+                        color: lightgray;
+                    }
+
+                    .address-referral-link {
+                        background-color: $box-color-2;
+                        width: 95%;
+                        border-radius: 10px;
+                        padding: 7px 0;
+
+                        span {
+                            font-size: 12px;
+                            text-transform: none;
+                            padding: 12px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

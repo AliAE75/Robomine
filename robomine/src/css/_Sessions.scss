@@ -1,0 +1,96 @@
+.sessions_layout {
+    display: inline-flex;
+    width: 66.6666%;
+
+    .sessions_section {
+        background-color: rgb(24, 25, 29);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        border-radius: 20px;
+        padding: 3rem 2rem 2rem;
+        margin: 3rem 6rem 3rem 0;
+
+        h2 {
+            margin-bottom: 2rem;
+            text-transform: none;
+        }
+
+        .active-sessions-table {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .header-table p {
+                color: $gray;
+            }
+
+            .table-row {
+                width: 100%;
+                display: flex;
+                margin: 0 0 1rem;
+                padding-top: 0.5rem;
+                align-items: center;
+                border-top: 1px solid $border-color;
+                justify-content: space-between;
+
+                &:first-child {
+                    border: none;
+                }
+
+                p {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 12px;
+                    line-height: 1.5;
+                    text-align: left;
+
+                    span {
+                        color: $gray;
+                    }
+
+                    &.s-1 {
+                        width: 50%;
+                    }
+
+                    &.s-2 {
+                        width: 25%;
+                    }
+
+                    &.s-3 {
+                        width: 25%;
+                        text-align: end;
+
+                        span {
+                            color: $gray;
+                            background-color: white;
+                            width: 33%;
+                            padding: 5px 15px;
+                            margin-left: auto;
+                            font-size: 10px;
+                            text-align: center;
+                            border-radius: 5px;
+
+                            i {
+                                color: $gray;
+                                font-size: 8px;
+                                margin-right: 5px;
+                                margin-left: -5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn-referral {
+            margin: 2rem 0 3rem auto;
+
+            &:last-child {
+                margin: 2rem 0 0 auto;
+            }
+        }
+    }
+}

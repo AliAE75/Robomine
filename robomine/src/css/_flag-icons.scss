@@ -1,0 +1,41 @@
+.fi {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    width: 1.33333333em;
+    line-height: 1em;
+
+    &:before {
+        content: '\00a0';
+    }
+
+    &.fis {
+        width: 1em;
+    }
+
+    &-ae {
+        background-image: url(../assets/flag-icons/ae.svg);
+    }
+
+    &-es {
+        background-image: url(../assets/flag-icons/es.svg);
+    }
+
+    &-it {
+        background-image: url(../assets/flag-icons/it.svg);
+    }
+
+    &-de {
+        background-image: url(../assets/flag-icons/de.svg);
+    }
+
+    &-fr {
+        background-image: url(../assets/flag-icons/fr.svg);
+    }
+
+    &-gb {
+        background-image: url(../assets/flag-icons/gb.svg);
+    }
+}

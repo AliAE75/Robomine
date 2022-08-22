@@ -1,0 +1,91 @@
+.apiKeys_layout {
+    display: inline-flex;
+    width: 66.6666%;
+
+    .apiKeys_section {
+        background-color: rgb(24, 25, 29);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        border-radius: 20px;
+        padding: 3rem 2rem 2rem;
+        margin: 3rem 6rem 3rem 0;
+
+        p:first-child {
+            font-size: 10px;
+            color: $gray;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-weight: 300;
+            text-transform: none;
+            margin-bottom: 1rem;
+            
+            span {
+                margin-left: 2rem;
+                color: $orange;
+            }
+        }
+
+        .user-email-address {
+            color: white;
+            margin-bottom: 3rem;
+
+            span {
+                margin-left: 1rem;
+                text-transform: none;
+                font-weight: 400;
+            }
+        }
+
+        h2 {
+            text-transform: none;
+            margin-bottom: 1rem;
+        }
+
+        .p-3 {
+            text-transform: none;
+            margin-bottom: 1rem;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .pass,
+            .fa2 {
+                display: inline-flex;
+                width: 49%;
+                flex-direction: column;
+
+                label {
+                    font-size: 10px;
+                    color: $gray
+                }
+
+                input {
+                    background-color: transparent;
+                    outline: none;
+                    border: 2px solid $border-color;
+                    padding: 10px;
+                    border-radius: 10px;
+                }
+            }
+
+            .btn-enable-api {
+                display: inline-block;
+                width: fit-content;
+                background-color: $dashboard-color;
+                border: none;
+                padding: 1rem 1.5rem;
+                margin-top: 1rem;
+                border-radius: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+}

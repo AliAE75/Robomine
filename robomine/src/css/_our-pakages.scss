@@ -1,0 +1,44 @@
+.ourpackages__container {
+    margin: 10rem 6rem 0;
+
+    .ourpackages__title {
+        width: 40%;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        margin: 3rem 3rem 0;
+
+        .package {
+            box-shadow: 0px 3px 6px #FFFFFF29;
+            border-radius: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+
+            .package__image {
+                margin: 2rem 0 2rem;
+
+                img {
+                    height: 130px;
+                }
+            }
+
+            .package__title {
+                font-weight: 600;
+                margin-bottom: 1rem;
+            }
+
+            .package__info {
+                font-size: 10px;
+                font-weight: 600;
+                color: #777E90;
+                margin-bottom: 2rem;
+                line-height: 16px;
+            }
+        }
+    }
+}
