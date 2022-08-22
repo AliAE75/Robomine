@@ -1130,11 +1130,20 @@ img {
   width: 130%;
 }
 .layout_main_section .layout_section .dashboard_sidebar .sidebar-items a {
+  display: flex;
   color: #777E90;
-  align-items: center;
   font-weight: 600;
   text-transform: none;
   font-size: 12px;
+}
+.layout_main_section .layout_section .dashboard_sidebar .sidebar-items a i {
+  margin: 2px 8px 0 0;
+}
+.layout_main_section .layout_section .dashboard_sidebar .sidebar-items a i .list-icon {
+  font-size: 20px;
+}
+.layout_main_section .layout_section .dashboard_sidebar .sidebar-items a i .list-icon > *, .layout_main_section .layout_section .dashboard_sidebar .sidebar-items a i .list-icon > * > * {
+  color: #777E90;
 }
 .layout_main_section .layout_section .dashboard_sect {
   display: flex;

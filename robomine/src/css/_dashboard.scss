@@ -3,10 +3,10 @@
     min-height: 100vh;
     // padding-top: 3rem;
     padding-bottom: 2rem;
-    
+
     .layout_section {
         display: inline;
-        
+
         .dashboard_header {
             position: relative;
             display: flex;
@@ -73,12 +73,25 @@
                 }
 
                 a {
+                    display: flex;
                     color: #777E90;
-                    align-items: center;
-
                     font-weight: 600;
                     text-transform: none;
                     font-size: 12px;
+
+                    i {
+                        margin: 2px 8px 0 0;
+
+                        .list-icon {
+                            font-size: 20px;
+
+                            & > *,
+                            & > * > * {
+                                color: #777E90;
+                            }
+                        }
+                    }
+
                 }
             }
         }

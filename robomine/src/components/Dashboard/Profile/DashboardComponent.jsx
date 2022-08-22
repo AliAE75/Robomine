@@ -22,13 +22,13 @@ export default function DashboardComponent(props) {
 
             <div className="dashboard_sidebar" id="dashboard_sidebar">
                 <div className="sidebar-items">
-                <Link to={"/profile"}><i><IoPersonOutline /></i> Profile</Link>
-                    <Link to={"/referrals"}><i><BsBoxArrowUp /></i> Referrals</Link>
-                    <Link to={"/api-keys"}><i><BsKeyboard /></i> API keys</Link>
+                <Link to={"/profile"}><i><IoPersonOutline className='list-icon' /></i> Profile</Link>
+                    <Link to={"/referrals"}><i><BsBoxArrowUp className='list-icon' /></i> Referrals</Link>
+                    <Link to={"/api-keys"}><i><BsKeyboard className='list-icon' /></i> API keys</Link>
                     <div className="hr-3"></div>
-                    <Link to={"/sessions"}><i><BsLaptop /></i> Sessions & login history</Link>
-                    <Link to={"/2fa"}><i><IoBarcodeSharp /></i> 2FA</Link>
-                    <Link to={"/change-password"}><i><RiLock2Line /></i> Change password</Link>
+                    <Link to={"/sessions"}><i><BsLaptop className='list-icon' /></i> Sessions & login history</Link>
+                    <Link to={"/2fa"}><i><IoBarcodeSharp className='list-icon' /></i> 2FA</Link>
+                    <Link to={"/change-password"}><i><RiLock2Line className='list-icon' /></i> Change password</Link>
                 </div>
             </div>
         </div>
